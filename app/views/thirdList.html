@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="tasks-complete"><span>{{tasks3.length}}</span> Tasks completed</div>
+</div>
+
+<ul class="list">
+    <li class="listItem" ng-repeat="task3 in tasks3 track by $index">
+        {{task3.taskName}}
+        <img ng-click="deleteTask($index)" class="deleteIcon" src="images/deleteIcon.svg" height="22px">
+    </li>
+</ul>
+
+<div class="footer">
+    <form name="userInput" ng-submit="submitForm()" novalidate>
+        <div class="container">
+            <div>
+                <input type="text" name="text" ng-model="newTask" required>
+            </div>
+
+            <button type="submit" class="addBtn" ng-disabled="userInput.$invalid"><img class="addIcon" src="images/addIcon.svg" height="70px"></button>
+        </div>
+    </form>
+</div>

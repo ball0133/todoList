@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" href="styles/style.css">
+<!--    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+    <!------- NAVIGATION ------->
+    <header>
+<!--        <h1>Tasks</h1>-->
+        <ul class="tabs  primary-nav">
+            <li class="tabs__item">
+                <a ui-sref="secondList" ui-sref-active="active" class="tabs__link"><img src="images/futureIcon.svg" height="25px"></a>
+            </li>
+            <li class="tabs__item">
+                <a ui-sref="main" ui-sref-active="active" class="tabs__link"><img src="images/todayIcon.svg" height="25px"></a>
+            </li>
+            <li class="tabs__item">
+                <a ui-sref="thirdList" ui-sref-active="active" class="tabs__link"><img src="images/doneIcon.svg" height="25px"></a>
+            </li>
+        </ul>
+
+    </header>
+
+    <!------- MAIN CONTENT ------->
+    <!------- Inject content here ------->
+    <div class="wrapper">
+        <div ui-view></div>
+    </div>
+
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="controllers/main-controller.js"></script>
+    <script src="controllers/second-controller.js"></script>
+    <script src="controllers/third-controller.js"></script>
+
+</body>
+
+</html>
